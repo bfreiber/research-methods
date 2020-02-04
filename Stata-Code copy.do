@@ -35,7 +35,7 @@ label variable bigcompanycandidate "Big company candidate"
 
 * Run regression: 
 //reg recommendsaiadoption readethicsarticle
-reg eliteschoolcandidate calledback
+reg calledback eliteschoolcandidate
 
 * Store regression
 eststo regression_one 
@@ -50,13 +50,13 @@ eststo regression_one
 **********************************
 * FOR PEOPLE USING MICROSOFT (AKA "WORD"):
 global tableoptions "bf(%15.2gc) sfmt(%15.2gc) se label noisily noeqlines nonumbers varlabels(_cons Constant, end("" ) nolast)  starlevels(* 0.1 ** 0.05 *** 0.01) replace r2"
-esttab regression_one using Candidate-call-back-table.rtf, $tableoptions keep(calledback)
+esttab regression_one using Candidate-call-back-table.rtf, $tableoptions keep(eliteschoolcandidate)
 
 //2+ variables? (regression works, table syntax in the future...)
-//reg eliteschoolcandidate malecandidate bigcompanycandidate calledback
+//reg calledback eliteschoolcandidate malecandidate bigcompanycandidate
 //eststo regression_two 
 //global tableoptions "bf(%15.2gc) sfmt(%15.2gc) se label noisily noeqlines nonumbers varlabels(_cons Constant, end("" ) nolast)  starlevels(* 0.1 ** 0.05 *** 0.01) replace r2"
-//esttab regression_two using Candidate-call-back-table-multiple-iv.rtf, $tableoptions keep(calledback)
+//esttab regression_two using Candidate-call-back-table-multiple-iv.rtf, $tableoptions keep(eliteschoolcandidate malecandidate bigcompanycandidate)
 
 
 

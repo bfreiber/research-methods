@@ -35,7 +35,7 @@ label variable bigcompanycandidate "Big company candidate"
 
 * Run regression: 
 //reg recommendsaiadoption readethicsarticle
-reg calledback eliteschoolcandidate
+reg calledback malecandidate eliteschoolcandidate
 
 * Store regression
 eststo regression_one 
